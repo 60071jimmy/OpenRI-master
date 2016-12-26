@@ -28,5 +28,6 @@ Vision, UR
 (Future support: AOI, BPNN, SVM, Face Recognition, AGV)
 
 [Contact Info]	
-openrobot@openrobot.club		
+openrobot@openrobot.club
+s103360021@gmail.com		
 
