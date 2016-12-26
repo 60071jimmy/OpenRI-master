@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0681B2BF-2D45-4103-A4F9-DAFC3886AD9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>app</RootNamespace>
+    <AssemblyName>vision_app</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\app.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>app.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormSpecialFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpecialFilter.Designer.cs">
+      <DependentUpon>FormSpecialFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOpenGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOpenGL.Designer.cs">
+      <DependentUpon>FormOpenGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBasicProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBasicProcess.designer.cs">
+      <DependentUpon>FormBasicProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWebCam.Designer.cs">
+      <DependentUpon>FormWebCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vision.cs" />
+    <Compile Include="FormBrightnessContrast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrightnessContrast.Designer.cs">
+      <DependentUpon>FormBrightnessContrast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDilateErode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDilateErode.Designer.cs">
+      <DependentUpon>FormDilateErode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdgeDetector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdgeDetector.Designer.cs">
+      <DependentUpon>FormEdgeDetector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFFT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFFT.Designer.cs">
+      <DependentUpon>FormFFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImage.Designer.cs">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNoise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNoise.Designer.cs">
+      <DependentUpon>FormNoise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSharpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSharpen.Designer.cs">
+      <DependentUpon>FormSharpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSmooth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSmooth.Designer.cs">
+      <DependentUpon>FormSmooth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThreshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThreshold.Designer.cs">
+      <DependentUpon>FormThreshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWavelet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWavelet.Designer.cs">
+      <DependentUpon>FormWavelet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormOpenGL.resx">
+      <DependentUpon>FormOpenGL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBasicProcess.resx">
+      <DependentUpon>FormBasicProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrightnessContrast.resx">
+      <DependentUpon>FormBrightnessContrast.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDilateErode.resx">
+      <DependentUpon>FormDilateErode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEdgeDetector.resx">
+      <DependentUpon>FormEdgeDetector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFFT.resx">
+      <DependentUpon>FormFFT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImage.resx">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNoise.resx">
+      <DependentUpon>FormNoise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSharpen.resx">
+      <DependentUpon>FormSharpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSmooth.resx">
+      <DependentUpon>FormSmooth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpecialFilter.resx">
+      <DependentUpon>FormSpecialFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThreshold.resx">
+      <DependentUpon>FormThreshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWavelet.resx">
+      <DependentUpon>FormWavelet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWebCam.resx">
+      <DependentUpon>FormWebCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(SolutionDir)vision_dll\x64\Release\vision.dll" "$(SolutionDir)vision_app\bin\x64\Release\vision.dll";
+copy "$(SolutionDir)..\..\3rdparty\opencv\x64\vc14\bin\opencv_world310.dll" "$(SolutionDir)vision_app\bin\x64\Release\opencv_world310.dll";
+copy "$(SolutionDir)..\..\3rdparty\freeglut\bin\x64\freeglut.dll" "$(SolutionDir)vision_app\bin\x64\Release\freeglut.dll";
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
