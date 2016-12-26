@@ -2,6 +2,8 @@
 Open Source Robot Intelligence Library - Make your robot smarter.   
 http://www.openrobot.club/openri
 
+- 本專案繼承自OpenRI，用於發展影像處理與電腦視覺。
+
 [Purpose]		
 Robot software development kit for image analysis, sound analysis, artificial intelligence, and motion.
 
