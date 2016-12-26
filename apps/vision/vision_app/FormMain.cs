@@ -33,9 +33,9 @@ using System.Windows;                                                           
 namespace app                                                                           //  命名空間app
 {                                                                                       //  進入app命名空間
     public delegate bool CallBack(int hwnd, int lParam);                                //  
-    public partial class FormMain : Form                                                //  
-    {
-        public static int hwndR1;
+    public partial class FormMain : Form                                                //  FormMain類別
+	{                                                                                   //	進入FormMain類別
+		public static int hwndR1;
 
 
         private OpenFileDialog openImageDialog;
@@ -266,5 +266,5 @@ namespace app                                                                   
             }
             */
         }
-    }
+	}																					//	結束FormMain類別
 }
