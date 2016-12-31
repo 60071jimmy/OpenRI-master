@@ -29,9 +29,9 @@ namespace app
 		[STAThread]
 		static void Main()																//	Main主程式
 		{																				//	進入Main主程式
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormMain());
+			Application.EnableVisualStyles();											//	為應用程式啟用視覺化樣式
+			Application.SetCompatibleTextRenderingDefault(false);						//	為部分控制項上定義的 UseCompatibleTextRendering 屬性設定應用程式範圍的預設值
+			Application.Run(new FormMain());											//	執行FormMain
 		}																				//	結束Main主程式
 	}
 }

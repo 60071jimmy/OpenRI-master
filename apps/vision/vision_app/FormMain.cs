@@ -42,13 +42,12 @@ namespace app																			//  命名空間app
 		public SaveFileDialog saveImageDialog;											//	宣告saveImageDialog為SaveFileDialog物件
 		public FormImage formImage = null;
 
-        public FormMain()
-        {
-            InitializeComponent();
+        public FormMain()                                                               //	FormMain副程式
+		{                                                                               //	進入FormMain副程式
+			InitializeComponent();                                                      //	初始化UI元件
+		}                                                                               //	結束FormMain副程式
 
-        }
-		      
-        private void FormMain_Load(object sender, EventArgs e)                          //	FormMain_Load副程式
+		private void FormMain_Load(object sender, EventArgs e)                          //	FormMain_Load副程式
 		{                                                                               //	進入FormMain_Load副程式
 			int ret = Vision.InitLib();
 
