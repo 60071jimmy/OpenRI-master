@@ -14,44 +14,43 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using System;                                                                           //  引入System函式庫
-using System.Collections.Generic;                                                       //  引入System.Collections.Generic函式庫
-using System.ComponentModel;                                                            //  引入System.ComponentModel函式庫
-using System.Data;                                                                      //  引入System.Data函式庫
-using System.Linq;                                                                      //  引入System.Linq函式庫
-using System.Text;                                                                      //  引入System.Text函式庫
-using System.Windows.Forms;                                                             //  引入System.Windows.Forms函式庫
-using System.Threading;                                                                 //  引入System.Threading函式庫
-using System.Globalization;                                                             //  引入System.Globalization函式庫
-using System.Resources;                                                                 //  引入System.Resources函式庫
-using System.IO;                                                                        //  引入System.IO函式庫
-using System.IO.Ports;                                                                  //  引入System.IO.Ports函式庫
-using System.Drawing;                                                                   //  引入System.Drawing函式庫
-using System.Runtime.InteropServices;                                                   //  引入System.Runtime.InteropServices函式庫
-using System.Windows;                                                                   //  引入System.Windows函式庫
+using System;																			//  引入System函式庫
+using System.Collections.Generic;														//  引入System.Collections.Generic函式庫
+using System.ComponentModel;															//  引入System.ComponentModel函式庫
+using System.Data;																		//  引入System.Data函式庫
+using System.Linq;																		//  引入System.Linq函式庫
+using System.Text;																		//  引入System.Text函式庫
+using System.Windows.Forms;																//  引入System.Windows.Forms函式庫
+using System.Threading;																	//  引入System.Threading函式庫
+using System.Globalization;																//  引入System.Globalization函式庫
+using System.Resources;																	//  引入System.Resources函式庫
+using System.IO;																		//  引入System.IO函式庫
+using System.IO.Ports;																	//  引入System.IO.Ports函式庫
+using System.Drawing;																	//  引入System.Drawing函式庫
+using System.Runtime.InteropServices;													//  引入System.Runtime.InteropServices函式庫
+using System.Windows;																	//  引入System.Windows函式庫
 
-namespace app                                                                           //  命名空間app
-{                                                                                       //  進入app命名空間
-    public delegate bool CallBack(int hwnd, int lParam);                                //  
-    public partial class FormMain : Form                                                //  FormMain類別
-	{                                                                                   //	進入FormMain類別
+namespace app																			//  命名空間app
+{																						//  進入app命名空間
+    public delegate bool CallBack(int hwnd, int lParam);								//  
+    public partial class FormMain : Form												//  FormMain類別
+	{																					//	進入FormMain類別
 		public static int hwndR1;
 
 
-        private OpenFileDialog openImageDialog;
-        public SaveFileDialog saveImageDialog;
-        public FormImage formImage = null;
+        private OpenFileDialog openImageDialog;											//	宣告openImageDialog為OpenFileDialog物件
+		public SaveFileDialog saveImageDialog;											//	宣告saveImageDialog為SaveFileDialog物件
+		public FormImage formImage = null;
 
         public FormMain()
         {
             InitializeComponent();
 
         }
-
-      
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            int ret = Vision.InitLib();
+		      
+        private void FormMain_Load(object sender, EventArgs e)                          //	FormMain_Load副程式
+		{                                                                               //	進入FormMain_Load副程式
+			int ret = Vision.InitLib();
 
             Vision.EnableDbg();
             
@@ -65,10 +64,10 @@ namespace app                                                                   
             saveImageDialog.Title = "Save Image As";
             saveImageDialog.Filter = "Image files|*.png;";
 
-            this.Text = "OpenRI - Vision";
-        }
+            this.Text = "OpenRI - Vision";                                              //	設定視窗名稱為"OpenRI - Vision"
+		}                                                                               //	結束FormMain_Load副程式
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+		private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openImageDialog.ShowDialog() == DialogResult.OK)
             {
