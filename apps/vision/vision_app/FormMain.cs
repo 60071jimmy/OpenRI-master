@@ -42,13 +42,13 @@ namespace app																			//  命名空間app
 		public SaveFileDialog saveImageDialog;											//	宣告saveImageDialog為SaveFileDialog物件
 		public FormImage formImage = null;
 
-        public FormMain()                                                               //	FormMain副程式
-		{                                                                               //	進入FormMain副程式
-			InitializeComponent();                                                      //	初始化UI元件
-		}                                                                               //	結束FormMain副程式
+        public FormMain()																//	FormMain副程式
+		{																				//	進入FormMain副程式
+			InitializeComponent();														//	初始化UI元件
+		}																				//	結束FormMain副程式
 
-		private void FormMain_Load(object sender, EventArgs e)                          //	FormMain_Load副程式
-		{                                                                               //	進入FormMain_Load副程式
+		private void FormMain_Load(object sender, EventArgs e)							//	FormMain_Load副程式
+		{																				//	進入FormMain_Load副程式
 			int ret = Vision.InitLib();
 
             Vision.EnableDbg();
@@ -63,16 +63,16 @@ namespace app																			//  命名空間app
             saveImageDialog.Title = "Save Image As";
             saveImageDialog.Filter = "Image files|*.png;";
 
-            this.Text = "OpenRI - Vision";                                              //	設定視窗名稱為"OpenRI - Vision"
-		}                                                                               //	結束FormMain_Load副程式
+            this.Text = "OpenRI - Vision";												//	設定視窗名稱為"OpenRI - Vision"
+		}																				//	結束FormMain_Load副程式
 
-		private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (openImageDialog.ShowDialog() == DialogResult.OK)
-            {
-                formImage = new FormImage();
-                formImage.formMain = this;
-                formImage.AutoSize = true;
+		private void openToolStripMenuItem_Click(object sender, EventArgs e)			//	openToolStripMenuItem_Click副程式
+		{																				//	進入openToolStripMenuItem_Click副程式
+			if (openImageDialog.ShowDialog() == DialogResult.OK)                        //	若openImageDialog視窗點選OK
+			{																			//	進入if敘述
+                formImage = new FormImage();											//	建立新影像視窗
+                formImage.formMain = this;                                              //	設定父視窗為FormMain
+				formImage.AutoSize = true;												//	設定影像視窗自動大小
                 formImage.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 formImage.MdiParent = this;
                 formImage.imageFileName = openImageDialog.FileName;
@@ -92,19 +92,19 @@ namespace app																			//  命名空間app
                 Vision.Log("File open : " + openImageDialog.FileName);
                 */
 
-            }
-        }
+            }																			//	結束if敘述
+		}																				//	結束openToolStripMenuItem_Click副程式
 
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (saveImageDialog.ShowDialog() == DialogResult.OK)
+		private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)			//	SaveAsToolStripMenuItem_Click副程式
+		{																				//	進入SaveAsToolStripMenuItem_Click副程式
+			if (saveImageDialog.ShowDialog() == DialogResult.OK)
             {
                 //Vision.SaveImage(imageSn, saveImageDialog.FileName);
                 //formImage.bmpImage.Save(saveImageDialog.FileName);
             }
-        }
+		}																				//	結束SaveAsToolStripMenuItem_Click副程式
 
-        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+		private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Vision.Log("FormMain_FormClosed ++");
             Vision.StopWebCam();

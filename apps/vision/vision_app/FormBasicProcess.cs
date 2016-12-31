@@ -23,9 +23,9 @@ using System.Linq;                                                              
 using System.Text;                                                                      //	引入System.Text函式庫
 using System.Windows.Forms;                                                             //	引入System.Windows.Forms函式庫
 
-namespace app
-{
-    public partial class Basic_Control_Form : Form
+namespace app                                                                           //	app命名空間
+{                                                                                       //	進入app命名空間
+	public partial class Basic_Control_Form : Form
     {
         bool isApply = false;
         int imageProcessedSn = -1;

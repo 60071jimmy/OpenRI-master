@@ -17,7 +17,7 @@ limitations under the License.
 using System;                                                                           //  引入System函式庫
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
+using System.Windows.Forms;                                                             //	引入System.Windows.Forms函式庫
 
 namespace app
 {

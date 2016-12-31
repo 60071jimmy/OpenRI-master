@@ -269,7 +269,6 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "FormMain";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
 			this.Load += new System.EventHandler(this.FormMain_Load);
 			this.menuStrip1.ResumeLayout(false);
