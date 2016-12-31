@@ -21,17 +21,17 @@ using System.Windows.Forms;
 
 namespace app
 {
-    static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()																//	Main主程式
-        {																				//	進入Main主程式
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
-        }																				//	結束Main主程式
-    }
+	static class Program
+	{
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
+		static void Main()																//	Main主程式
+		{																				//	進入Main主程式
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new FormMain());
+		}																				//	結束Main主程式
+	}
 }
