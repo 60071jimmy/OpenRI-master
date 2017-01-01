@@ -716,7 +716,8 @@ extern "C" {
 		return 1;
 	}
 
-    RI_API int Vision_InitLib() {
+    RI_API int Vision_InitLib() 
+	{
         dbg("Vision_InitLib ++");
 
 		int ret;

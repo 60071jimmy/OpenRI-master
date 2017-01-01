@@ -32,10 +32,10 @@ using System.Windows;																	//  引入System.Windows函式庫
 
 namespace app																			//  命名空間app
 {																						//  進入app命名空間
-    public delegate bool CallBack(int hwnd, int lParam);								//  
+    //public delegate bool CallBack(int hwnd, int lParam);								//  
     public partial class FormMain : Form												//  FormMain類別
 	{																					//	進入FormMain類別
-		public static int hwndR1;
+		//public static int hwndR1;
 
 
         private OpenFileDialog openImageDialog;											//	宣告openImageDialog為OpenFileDialog物件
@@ -45,6 +45,7 @@ namespace app																			//  命名空間app
         public FormMain()																//	FormMain副程式
 		{																				//	進入FormMain副程式
 			InitializeComponent();														//	初始化UI元件
+			ErrorCodeClass.ErrorCode = 0;												//	初始化ErrorCode為0
 		}																				//	結束FormMain副程式
 
 		private void FormMain_Load(object sender, EventArgs e)							//	FormMain_Load副程式
@@ -73,8 +74,8 @@ namespace app																			//  命名空間app
                 formImage = new FormImage();											//	建立新影像視窗
                 formImage.formMain = this;                                              //	設定父視窗為FormMain
 				formImage.AutoSize = true;												//	設定影像視窗自動大小
-                formImage.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                formImage.MdiParent = this;
+                formImage.AutoSizeMode = AutoSizeMode.GrowAndShrink;					//	設定AutoSizeMode
+				formImage.MdiParent = this;
                 formImage.imageFileName = openImageDialog.FileName;
                 formImage.Show();
 
